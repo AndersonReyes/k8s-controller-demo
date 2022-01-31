@@ -1,0 +1,16 @@
+domain: papermill.dev
+layout:
+- go.kubebuilder.io/v3
+projectName: papermillcontroller
+repo: github.com/andersonreyes/papermillcontroller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: papermill.dev
+  group: papermill
+  kind: ScheduledNotebook
+  path: github.com/andersonreyes/papermillcontroller/api/v1
+  version: v1
+version: "3"

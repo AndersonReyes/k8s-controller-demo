@@ -1,0 +1,24 @@
+# permissions for end users to edit schedulednotebooks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: schedulednotebook-editor-role
+rules:
+- apiGroups:
+  - papermill.papermill.dev
+  resources:
+  - schedulednotebooks
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - papermill.papermill.dev
+  resources:
+  - schedulednotebooks/status
+  verbs:
+  - get

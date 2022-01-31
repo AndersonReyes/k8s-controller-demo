@@ -1,0 +1,12 @@
+apiVersion: papermill.papermill.dev/v1
+kind: ScheduledNotebook
+metadata:
+  name: schedulednotebook-sample
+spec:
+  name: andersontesting
+  dockerImage: test-app
+  schedule: "*/1 * * * *"
+  inputNotebook: "local:///home/app/input.ipynb"
+  outputNotebook: "local:///home/app/out.ipynb"
+  parameters:
+    name: Anderson
